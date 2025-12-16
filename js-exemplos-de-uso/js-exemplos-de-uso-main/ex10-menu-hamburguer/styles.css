@@ -1,0 +1,78 @@
+/* styles.css */
+/* Reset básico para remover margens e paddings padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define a fonte padrão para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo da barra de navegação */
+nav {
+  display: flex;
+  justify-content: space-between; /* Alinha os itens à esquerda e à direita */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 1rem 2rem; /* Espaçamento interno */
+  background-color: #333; /* Cor de fundo */
+}
+
+/* Estilo do ícone do menu hambúrguer */
+.menu-icon {
+  display: none; /* Não exibe em telas grandes */
+  font-family: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Estilo da lista de navegação */
+.nav-list {
+  display: flex; /* Exibe os itens em linha */
+  list-style: none; /* Remove os marcadores de lista */
+
+/* Move a lista para o lado direito */
+  margin-left: auto; 
+}
+
+/* Estilo dos itens da lista */
+.nav-list li {
+  margin-left: 2rem; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos links */
+.nav-list a {
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+  font-size: 1rem; /* Tamanho da fonte */
+}
+
+/* Estilos para telas pequenas (max-width: 768px) */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Exibe em bloco (Em telas pequenas) */
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+  }
+
+  .nav-list li {
+    margin: 1rem 0; /* Espaçamento entre os itens */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  /* Classe ativada via JavaScript para exibir a lista */
+  .nav-list.active {
+    display: flex; /* Exibe a lista quando a classe "active" é adicionada */
+  }
+}

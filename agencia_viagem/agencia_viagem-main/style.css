@@ -1,0 +1,146 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* Reset de estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poiret One", serif;
+    list-style: none;
+}
+
+/* Definição de variáveis de cores */
+:root {
+    --fundo-escuro: #0077b6; 
+    --texto-fundo-d: #005f8a; 
+    --texto-claro: #FFFFFF; 
+    --texto-secundario: #F1f1f1; 
+    --texto-terciario: #F9f9f9; 
+    --texto-cinza: #ccc; 
+}
+
+/* Estilos para o cabeçalho */
+header{
+    background: var(--fundo-escuro);
+    color: var(--texto-claro);
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Dacing Script", serif;
+    font-size: 2.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-weight: bolder;
+    /* padding: 5px; */
+}
+nav a:hover {
+    color: #000;
+    /* background-color: #c3c3c3; */
+    /* border-radius: 3px; */
+}
+
+/* Main */
+.container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: url(img/london.jpg) no-repeat center fixed;
+    background: cover;
+}
+
+/* Barra lateral esquerda */
+.sidebar {
+    flex: 1;
+    min-width: 200px;
+    background: var(--texto-secundario);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Barra de busca central */
+.main-content {
+    flex: 2;
+    min-width: 300px;
+    padding: 15px;
+}
+
+.subtittle {
+    color: var(--texto-secundario);
+    font-size: 2.5rem;
+}
+
+/* Barra lateral direita */
+.secondary-content {
+    flex: 1;
+    min-width: 200px;
+    background: var(--texto-terciario);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+li {
+    padding: 9px;
+}
+
+/* Estilos do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    border: 1px solid var(--texto-cinza);
+    border-radius: 5px;
+}
+
+button {
+    background: var(--fundo-escuro);
+    color: var(--texto-claro);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+button:hover {
+    background: #005f8a;
+
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Footer */
+
+footer {
+    background: var(--fundo-escuro);
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}

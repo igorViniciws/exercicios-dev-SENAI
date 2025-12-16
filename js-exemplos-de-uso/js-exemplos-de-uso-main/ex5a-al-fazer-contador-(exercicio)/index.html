@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 5a: Contador de Cliques</title>
+  <style>
+    /* Estilo inicial do parágrafo */
+    #myText {
+      padding: 10px;
+      background-color: lightgray;
+      color: black;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botão que incrementa o contador -->
+  <button id="myButton">Clique aqui</button>
+
+  <!-- Parágrafo que exibe o contador e muda de cor -->
+  <p id="myText">Contador: 0</p>
+
+  <!-- Script JavaScript embutido na página -->
+  <script>
+    // Seleciona o botão e o parágrafo pelo ID
+    const button = document.querySelector('#myButton');
+    const text = document.querySelector('#myText');
+
+    // Variável para armazenar o contador de cliques
+    let contador = 0;
+
+    // Adiciona um evento de clique ao botão
+    button.addEventListener('click', () => {
+      // Incrementa o contador
+      contador++;
+
+      // Atualiza o texto do parágrafo com o novo valor do contador
+      text.textContent = `Contador: ${contador}`;
+
+      // Verifica se o contador é par ou ímpar e muda a cor de fundo do parágrafo
+      if (contador % 2 === 0) {
+        text.style.backgroundColor = 'lightgreen';
+      } else {
+        text.style.backgroundColor = 'lightcoral';
+      }
+    });
+  </script>
+</body>
+</html>

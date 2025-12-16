@@ -1,0 +1,321 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #F9003D; /* Vermelho SENAI */
+    --cor-secundaria: #A259F7; /* Roxo SENAI */
+    --cor-destaque: #FFAF00; /* Amarelo SENAI */
+    --fundo-escuro: #080324; /* Fundo escuro */
+    --texto-claro: #FFFFFF; /* Texto branco */
+    --texto-cinza: #C7BAB3; /* Texto cinza */
+}
+
+body {
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1.6;
+    font-size: 18px; /* Tamanho da fonte base aumentado */
+}
+
+/* Container */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: var(--cor-primaria);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 0; /* Altura reduzida */
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* Logo um pouco maior */
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem; /* Tamanho da fonte aumentado */
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--cor-destaque);
+}
+
+.botao {
+    background-color: var(--cor-secundaria);
+    color: var(--texto-claro) !important;
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2rem; /* Tamanho da fonte aumentado */
+    transition: transform 0.3s ease;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--texto-claro);
+    font-size: 1.8rem; /* Ícone do menu maior */
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url(/assets/imagem-fundo-banner.jpg);
+    /* background: url(/assets/imagem-fundo-banner.jpg); */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 60px; /* Ajuste para o header menor */
+}
+
+.conteudo-banner {
+    text-align: center;
+}
+
+.texto-banner h1 {
+    font-size: 5rem; /* Título maior */
+    margin-bottom: 1rem;
+}
+
+.linha-destaque {
+    width: 200px;
+    height: 2px;
+    background-color: var(--cor-destaque);
+    margin: 1rem auto;
+}
+
+.subtitulo {
+    font-size: 1.8rem; /* Subtítulo maior */
+    color: var(--texto-cinza);
+    margin-bottom: 2rem;
+}
+
+.mouse {
+    width: 60px; /* Ícone do mouse maior */
+    margin-top: 2rem;
+    opacity: 0.8;
+}
+
+/* Seção Sobre */
+.sobre {
+    background-color: #181012;
+    padding: 4rem 0;
+}
+
+.titulo-secao {
+    color: var(--cor-primaria);
+    font-size: 3rem; /* Título da seção maior */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.conteudo-sobre {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.imagem-sobre {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.texto-sobre {
+    width: 50%;
+}
+
+.destaque {
+    color: var(--cor-destaque);
+    font-weight: 700;
+    font-size: 1.5rem; /* Destaque maior */
+    text-transform: uppercase;
+}
+
+.texto-sobre h3 {
+    font-size: 2.5rem; /* Título maior */
+    margin: 1rem 0;
+    color: var(--texto-claro);
+}
+
+.texto-sobre p {
+    color: var(--texto-cinza);
+    font-size: 1.2rem; /* Texto maior */
+    line-height: 1.8;
+}
+
+/* Cards de Informação */
+/* Estilos para a seção info */
+.info {
+    background-color: var(--fundo-escuro);
+    padding: 4rem 0;
+    text-align: center; /* Centraliza o conteúdo da seção */
+}
+
+.cards-info {
+    display: flex;
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    align-items: center; /* Centraliza os cards verticalmente */
+    gap: 2rem; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha em telas menores */
+}
+
+.card {
+    background-color: #241A1C;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    margin: 1rem; /* Adiciona margem para espaçamento */
+}
+
+.card h3 {
+    color: var(--cor-destaque);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    background-color: var(--fundo-escuro);
+    padding: 1.5rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Endereço */
+.conteudo-endereco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.texto-endereco {
+    font-size: 1.3rem; /* Texto maior */
+    line-height: 1.8;
+}
+
+.mapa {
+    width: 350px; /* Mapa maior */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--cor-primaria);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+    font-size: 1.2rem; /* Texto do rodapé maior */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px; /* Ajuste para o header menor */
+        left: 0;
+        right: 0;
+        background-color: var(--cor-primaria);
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .conteudo-sobre {
+        flex-direction: column;
+    }
+
+    .imagem-sobre,
+    .texto-sobre {
+        width: 100%;
+    }
+
+    .cards-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conteudo-endereco {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .texto-banner h1 {
+        font-size: 3.5rem; /* Título menor em telas pequenas */
+    }
+
+    .subtitulo {
+        font-size: 1.5rem; /* Subtítulo menor em telas pequenas */
+    }
+
+    .titulo-secao {
+        font-size: 2.5rem; /* Título da seção menor em telas pequenas */
+    }
+
+    .texto-sobre h3 {
+        font-size: 2rem; /* Título menor em telas pequenas */
+    }
+
+    .texto-sobre p {
+        font-size: 1.1rem; /* Texto menor em telas pequenas */
+    }
+
+    .card h3 {
+        font-size: 1.5rem; /* Título do card menor em telas pequenas */
+    }
+
+    .card p {
+        font-size: 1.3rem; /* Texto do card menor em telas pequenas */
+    }
+
+    .texto-endereco {
+        font-size: 1.1rem; /* Texto menor em telas pequenas */
+    }
+
+    .mapa {
+        width: 100%; /* Mapa responsivo */
+    }
+}

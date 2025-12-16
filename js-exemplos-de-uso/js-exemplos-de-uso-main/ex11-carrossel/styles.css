@@ -1,0 +1,70 @@
+/* styles.css */
+/* Reset básico para remover margens e paddings padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define a fonte padrão para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Container do carrossel */
+.carousel-container {
+  position: relative; /* Permite posicionar os botões dentro do container */
+  max-width: 1000px; /* Largura máxima do carrossel */
+  margin: 0 auto; /* Centraliza o carrossel na página */
+  margin-top: 30px; /* Espaçamento superior */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o container */
+  padding: 0 50px; /* Espaço para os botões de navegação */
+}
+
+/* Slides do carrossel */
+.carousel-slides {
+  display: flex; /* Exibe os slides em linha */
+  transition: transform 0.5s ease-in-out; /* Animação de transição entre slides */
+}
+
+/* Estilo de cada slide */
+.carousel-slide {
+  min-width: 100%; /* Cada slide ocupa 100% do container */
+  box-sizing: border-box;
+  display: none; /* Esconde todos os slides por padrão */
+}
+
+/* Slide ativo (visível) */
+.carousel-slide.active {
+  display: block; /* Exibe o slide ativo */
+}
+
+/* Estilo das imagens dentro dos slides */
+.carousel-slide img {
+  width: 100%; /* Faz a imagem ocupar 100% do slide */
+  display: block;
+}
+
+/* Estilo dos botões de navegação */
+.carousel-button {
+  position: absolute; /* Posiciona os botões dentro do container */
+  top: 50%; /* Alinha verticalmente ao centro */
+  transform: translateY(-50%); /* Ajusta o posicionamento vertical */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  color: white; /* Cor do ícone */
+  border: none; /* Remove a borda */
+  padding: 10px; /* Espaçamento interno */
+  cursor: pointer; /* Muda o cursor para pointer */
+  font-size: 1.5rem; /* Tamanho do ícone */
+  z-index: 1000; /* Garante que os botões fiquem acima das imagens */
+}
+
+/* Botão "Anterior" */
+.carousel-button.prev {
+  left: 0; /* Posiciona o botão à esquerda do container */
+}
+
+/* Botão "Próximo" */
+.carousel-button.next {
+  right: 0; /* Posiciona o botão à direita do container */
+}

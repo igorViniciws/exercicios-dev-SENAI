@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 5b: Troca de Imagem</title>
+  <style>
+    /* Estilo básico para centralizar a imagem e o texto */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Contêiner para a imagem e o texto */
+    .image-container {
+      text-align: center;
+    }
+
+    /* Estilo da imagem */
+    img {
+      width: 200px; /* Largura fixa */
+      height: 200px; /* Altura fixa */
+      border: 2px solid black;
+      border-radius: 10px; /* Borda arredondada */
+      transition: transform 0.3s ease; /* Efeito de transição suave */
+    }
+
+    /* Efeito de escala ao passar o mouse */
+    img:hover {
+      transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    }
+
+    /* Estilo do texto principal */
+    #myText {
+      margin-top: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Estilo do texto adicional */
+    .subtext {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Contêiner para a imagem e o texto -->
+  <div class="image-container">
+    <!-- Imagem que será alterada -->
+    <img id="myImage" src="image.png" alt="Imagem 1">
+
+    <!-- Texto principal que será modificado -->
+    <p id="myText">Passe o mouse sobre a imagem</p>
+
+    <!-- Texto adicional -->
+    <p class="subtext" id="subText">Sabrina Carpenter - Linda!</p>
+  </div>
+
+  <!-- Script JavaScript embutido na página -->
+  <script>
+    // Seleciona a imagem e os parágrafos pelo ID
+    const image = document.querySelector('#myImage');
+    const text = document.querySelector('#myText');
+    const subText = document.querySelector('#subText');
+
+    // Define as URLs das imagens
+    const imagemOriginal = 'image.png';
+    const imagemAlternativa = 'image2.png';
+
+    // Adiciona um evento de "mouseover" (quando o mouse passa sobre a imagem)
+    image.addEventListener('mouseover', () => {
+      // Altera a imagem para a alternativa
+      image.src = imagemAlternativa;
+      // Altera o texto principal
+      text.textContent = 'Imagem alterada!';
+      // Altera o texto adicional
+      subText.textContent = 'Doja Cat - Little cat!';
+    });
+
+    // Adiciona um evento de "mouseout" (quando o mouse sai da imagem)
+    image.addEventListener('mouseout', () => {
+      // Volta a imagem original
+      image.src = imagemOriginal;
+      // Restaura o texto principal
+      text.textContent = 'Passe o mouse sobre a imagem';
+      // Restaura o texto adicional
+      subText.textContent = 'Sabrina Carpenter - Linda!';
+    });
+  </script>
+</body>
+</html>

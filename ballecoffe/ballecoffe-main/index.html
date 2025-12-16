@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore dezenas de variações da bebida favorita entre os devs ao redor do mundo!">
+
+    <!-- Inserindo favicon -->
+    <link rel="shortcut icon" href="assets/favicon.jpg" type="image/x-icon">
+
+    <!-- Link para CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>BalleCoffe</title>
+</head>
+<body>
+    <!-- Cabeçalho (Header) -->
+    <header>
+        <nav>
+            <span class="title">ballecoffe</span>
+
+            <ul class="menu" id="MenuItems">
+                <li><a>Home</a></li>
+                <li>
+                    <a href="#receitas" style="text-decoration: none; color: #FFF2E780;" onmouseover="this.style.color='#FFF';" onmouseout="this.style.color='#FFF2E780';">
+                        Receitas
+                    </a>
+                </li>
+                <li><a>Novidades</a></li>
+                <li><a>Melhor Avaliadas</a></li>
+            </ul>
+
+            <a class="github" href="https://github.com" target="_blank">Github</a>
+
+            <!-- Menu hamburguer (Telas menores) -->
+            <img src="assets/menu.png" alt="" class="menu-icon" onclick="menutoggle()" />
+        </nav>
+    </header>
+
+    <!-- __________________________________________________________________________ -->
+    <!-- Sessão principal (Main) -->
+
+    <main>
+        <div class="container">
+            <section class="info">
+                <!-- Destaque -->
+                <header class="content">
+                    <span class="news marrom">Novidades</span>
+                    <h1>Encontre a receita perfeita!</h1>
+                    <hr/>
+                    <h2 class="subtitle">Explore dezenas de variações da bebida favorita entre os devs ao redor do mundo!</h2>
+                </header>
+    
+                <!-- Galeria de imagens -->
+                <div class="images">
+                    <figure>
+                        <img src="./assets/imagem-1.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-2.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-3.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-04.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-5.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-6.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-7.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-8.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-9.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-10.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-11.png" alt="">
+                    </figure>
+                    <figure>
+                        <img src="./assets/imagem-12.png" alt="">
+                    </figure>
+                </div>
+            </section>
+        </div>
+
+        <!-- Botão -->
+        <section class="button">
+            <button type="button">
+                <a href="#receitas"><img src="./assets/button.svg" alt=""></a>
+            </button>
+        </section>
+
+        <!-- _______________________________________ -->
+        <!-- Destaque das Receitas -->
+
+        <section class="receitas" id="receitas">
+            <header class="receitas-content">
+                <span class="news marrom">Receitas</span>
+                <h2 class="receitas-title">Confira as últimas receitas</h2>
+                <p class="receitas-subtitle">Dê uma olhada nas receitas mais amadas!</p>
+            </header>
+
+            <!-- Receitas -->
+            <article>
+
+                <!-- 1ª Receita -->
+                <div class="card">
+                    <div class="card-2">
+                        <header class="card-3">
+                            <div class="legend">
+                                <span class="news amarelo">em alta 🔥</span>
+                                <h3 class="cappuccino">Cappuccino</h3>
+                            </div>
+                            <p class="avaliacao">Extraordinário - 1/4</p>
+                        </header>
+    
+                        <p class="descricao">
+                            Delicie-se com a cremosidade e o aroma irresistível do nosso cappuccino. Transforme seus momentos em pura indulgência. ☕ #CappuccinoPerfeito</p>
+                        <div class="author">
+                            <!-- <img src="https://avatars.githubusercontent.com/u/96788434?v=4" alt=""> -->
+                            <img src="/assets/Avatar (0).png" alt="">
+                            <span class="ignacio">Ignacio Neto</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- 2ª Receita -->
+                <div class="card">
+                    <div class="card-2">
+                        <header class="card-3">
+                            <div class="legend">
+                                <span class="news amarelo">em alta 🔥</span>
+                                <h3 class="cappuccino">Brownie</h3>
+                            </div>
+                            <p class="avaliacao">Extraordinário - 2/4</p>
+                        </header>
+    
+                        <p class="descricao">
+                            Dê um toque doce ao seu dia com nossos irresistíveis brownies. Uma explosão de sabor em cada mordida! 🍫#MomentoDoce</p>
+                        <div class="author">
+                            <img src="./assets/Avatar (1).png" alt="">
+                            <span class="ignacio">Bruna Tavares</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3ª Receita -->
+                <div class="card">
+                    <div class="card-2">
+                        <header class="card-3">
+                            <div class="legend">
+                                <span class="news amarelo">em alta 🔥</span>
+                                <h3 class="cappuccino">Expresso</h3>
+                            </div>
+                            <p class="avaliacao">Extraordinário - 3/4</p>
+                        </header>
+    
+                        <p class="descricao">
+                            Desperte seus sentidos com a excelência do nosso café. Uma experiência única, uma xícara por vez. ☕ #CaféPerfeito</p>
+                        <div class="author">
+                            <img src="./assets/Avatar(5).png" alt="">
+                            <span class="ignacio">Sabrina Carpenter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4ª Receita -->
+                <div class="card">
+                    <div class="card-2">
+                        <header class="card-3">
+                            <div class="legend">
+                                <span class="news amarelo">em alta 🔥</span>
+                                <h3 class="cappuccino">Bolo de Cenoura</h3>
+                            </div>
+                            <p class="avaliacao">Extraordinário - 4/4</p>
+                        </header>
+    
+                        <p class="descricao">
+                            Um pedaço de céu em cada fatia: experimente nosso Bolo de Cenoura com Cobertura de Chocolate. Uma tentação irresistível! 🥕 #DelíciaDoDia</p>
+                        <div class="author">
+                            <img src="./assets/Avatar.png" alt="">
+                            <span class="ignacio">Milena (2DA)</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+        
+    </main>
+
+    <!-- _______________________________________ -->
+    <!-- Footer -->
+
+    <footer>
+        <p class="footer-container">Copyright &lt;CODECOFFEE /&gt; 2025</p>
+        <p class="footer-content">Feito com muito ❤️ e café por (2DA)</p>
+
+    </footer>
+
+
+
+
+    <!-- __________________________________________________________________________ -->
+    <!-- Footer (Rodapé) -->
+    <script src="efeitos.js"></script>
+
+</body>
+</html>

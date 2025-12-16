@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 4: Requisições Assíncronas</title>
+</head>
+<body>
+  <!-- Botão para buscar dados de uma API -->
+  <button id="myButton">Buscar Dados</button>
+
+  <!-- Parágrafo onde os dados serão exibidos -->
+  <p id="myText"></p>
+
+  <!-- Script JavaScript embutido na página -->
+  <script>
+    // Seleciona o botão e o parágrafo pelo ID
+    const button = document.querySelector('#myButton');
+    const text = document.querySelector('#myText');
+
+    // Uma API (Application Programming Interface) é uma interface que permite a comunicação entre sistemas e o compartilhamento de dados. No exemplo, a página utiliza a função fetch para enviar uma requisição assíncrona à API https://jsonplaceholder.typicode.com/todos/2, retornando informações no formato JSON. Esses dados são processados e exibidos no parágrafo da página, incluindo detalhes como userId, id, title e completed. Caso haja um erro na requisição, uma mensagem de erro é apresentada ao usuário.
+
+    // Adiciona um evento de clique ao botão
+    button.addEventListener('click', () => {
+      // Faz uma requisição assíncrona à API
+      fetch('https://jsonplaceholder.typicode.com/comments/5')
+
+      // Para simular erro de requisição
+      // fetch('https://invalidurl.example.com')
+
+          // Converte a resposta (da API) em Json
+          .then(response => response.json())
+          .then(data => {
+            // Exibe os parâmetros da resposta da API
+            text.innerHTML = `
+              Post ID: ${data.postId}<br>
+              ID: ${data.id}<br>
+              Name: ${data.name}<br>
+              Email: ${data.email}<br>
+              Corpo: ${data.body}
+            `;
+          })
+
+          .catch(error => {
+            // Exibe uma mensagem e erro (Se a requisição falhar)
+            text.textContent = 'Erro ao buscar dados!!';
+          });
+    });
+
+
+  </script>
+</body>
+</html>

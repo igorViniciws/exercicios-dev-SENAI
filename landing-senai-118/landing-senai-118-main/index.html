@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cursos técnicos SENAI - Formação profissional de excelência">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/Senai.jpg" type="image/x-icon">
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS único -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Ícones -->
+    <script src="https://kit.fontawesome.com/fa6968a204.js" crossorigin="anonymous"></script>
+    
+    <title>Cursos Técnicos SENAI</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <nav class="container">
+            <img class="logo" src="assets/logos_senai_branco.png" alt="Logo SENAI">
+            
+            <ul class="menu" id="menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#endereco">Endereço</a></li>
+                <li><a href="mailto:exemplo@email.com" class="botao">Contate-nos</a></li>
+            </ul>
+
+            <!-- Menu Hamburguer -->
+            <a class="menu-toggle" href="javascript:void(0)" onclick="mostrarMenu()">
+                <i id="icone-menu" class="fas fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Banner Principal -->
+        <section class="banner">
+            <div class="container conteudo-banner">
+                <div class="texto-banner">
+                    <h1>Cursos Técnicos SENAI</h1>
+                    <div class="linha-destaque"></div>
+                    <p class="subtitulo">Formação profissional de excelência</p>
+                    <img src="assets/mouse-down.png" alt="Scroll mouse" class="mouse">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre os Projetos -->
+        <section class="sobre" id="sobre">
+            <div class="container">
+                <h2 class="titulo-secao">Sobre os Projetos</h2>
+                
+                <div class="conteudo-sobre">
+                    <img src="assets/imagem-seção-sobre.jpg" alt="Alunos em aula prática" class="imagem-sobre">
+                    
+                    <div class="texto-sobre">
+                        <span class="destaque">Participantes</span>
+                        <h3>Mais de 80 alunos organizados em 16 grupos</h3>
+                        <p> O SENAI oferece cursos técnicos que combinam teoria e prática, preparando os alunos para os desafios do mercado de trabalho. Com uma metodologia inovadora e professores altamente qualificados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informações -->
+        <section class="info">
+            <div class="container cards-info">
+                <div class="card">
+                    <h3>Local</h3>
+                    <p>São Paulo</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Duração</h3>
+                    <p>90 dias</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Desafios</h3>
+                    <p>+30 Desafios</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Endereço -->
+        <section class="endereco" id="endereco">
+            <div class="container">
+                <h2 class="titulo-secao">Endereço</h2>
+                
+                <div class="conteudo-endereco">
+                    <p class="texto-endereco">
+                        Av. Santos Dumont, 300<br>
+                        Ipiranguinha, Santo André - SP<br>
+                        CEP: 09015-320
+                    </p>
+                    
+                    <a href="https://maps.app.goo.gl/oEnMLQu8WrTodYUv6" target="_blank">
+                        <img src="assets/mapa.png" alt="Localização no mapa" class="mapa">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>Copyright &copy; 2025 - SENAI/SESI Santo André 1.18</p>
+    </footer>
+
+    <script>
+        // Função para mostrar ou ocultar o menu
+        function mostrarMenu() {
+            const menu = document.getElementById("menu");
+            const icone = document.getElementById("icone-menu");
+            
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+                icone.classList.replace('fa-times', 'fa-bars');
+            } else {
+                menu.style.display = 'flex';
+                icone.classList.replace('fa-bars', 'fa-times');
+            }
+        }
+    
+        // Função para redefinir o menu ao redimensionar a tela
+        function resetarMenu() {
+            const menu = document.getElementById("menu");
+            const icone = document.getElementById("icone-menu");
+            const larguraTela = window.innerWidth;
+    
+            // Verifica se a tela é maior que o breakpoint do menu mobile (768px)
+            if (larguraTela > 768) {
+                menu.style.display = 'flex'; // Mostra o menu
+                icone.classList.replace('fa-times', 'fa-bars'); // Volta o ícone ao estado padrão
+            } else {
+                menu.style.display = 'none'; // Oculta o menu em telas pequenas
+            }
+        }
+    
+        // Adiciona o evento de redimensionamento
+        window.addEventListener('resize', resetarMenu);
+    
+        // Executa a função ao carregar a página para garantir o estado inicial correto
+        resetarMenu();
+    </script>
+</body>
+</html>

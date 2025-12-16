@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Promoções da Loja</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Centralizar o carrossel */
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .carousel-inner img {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Minha Loja</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Alerta Dinâmico -->
+<div class="container mt-3">
+    <div id="promo-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        🎉 Oferta Relâmpago: 20% de desconto em toda a loja! Aproveite!
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+</div>
+
+<!-- Carrossel de Imagens -->
+<div class="container carousel-container">
+    <div id="carouselExample" class="carousel slide w-50" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://placehold.co/600x400" class="d-block w-100" alt="Promoção 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://placehold.co/600x400/000000/FFF" class="d-block w-100" alt="Promoção 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://placehold.co/600x400/000000/F00" class="d-block w-100" alt="Promoção 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+        </div>
+    </div>
+</div>
+
+<!-- Barra de Progresso -->
+<div class="container mt-4">
+    <h2 class="text-center">Desbloqueie seu Desconto!</h2>
+    <div class="progress mt-3">
+        <div id="progress-bar" class="progress-bar bg-success" style="width: 0%;">0%</div>
+    </div>
+    <button id="increase-progress" class="btn btn-primary mt-3 d-block mx-auto">Ganhar Desconto</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('increase-progress').addEventListener('click', function() {
+        let progressBar = document.getElementById('progress-bar');
+        let width = parseInt(progressBar.style.width);
+        
+        if (width < 100) {
+            width += 20;
+            progressBar.style.width = width + "%";
+            progressBar.textContent = width + "%";
+
+            if (width === 100) {
+                alert("🎉 Parabéns! Você desbloqueou um desconto especial!");
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

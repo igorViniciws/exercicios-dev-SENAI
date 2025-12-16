@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta tags para configuração do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência de Viagens</title>
+    <!-- Favicon da página -->
+    <link rel="shortcut icon" href="img/icons.png" type="image/x-icon">
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+
+        <!-- Logo -->
+        <h1 id="inicio">Agência de Viagens ✈︎ </h1>
+
+        <!-- Navegação com links -->
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#destinos">Destinos</a>
+            <a href="#pacotes">Pacotes</a>
+            <a href="#contatos">Contato</a>
+        </nav>
+
+    </header>
+
+    <!-- Main (Conteúdo principal) -->
+    <div class="container">
+
+        <!-- Barra lateral esquerda (Destinos populares) -->
+        <aside class="sidebar">
+
+            <h2 id="destino">Destinos populares</h2>
+
+            <ul>
+                <li><img src="img/paris.jpg" alt="Paris">Paris, FR</li>
+                <li><img src="img/ny.jpg" alt="Nova York">Nova York, US</li>
+                <li><img src="img/riojaneiro.jpg" alt="Rio de Janeiro">Rio de Janeiro, BR</li>
+                <li><img src="img/roma.jpg" alt="Roma">Roma, IT</li>
+                <li><img src="img/tokio.jpg" alt="Tóquio">Tóquio, JP</li>
+            </ul>
+
+        </aside>
+
+        <!-- Seção central com formulário de pesquisa -->
+        <section class="main-content">
+            <h2 class="subtittle">Encontre seu destino</h2>
+
+            <form>
+                <input type="text" placeholder="Digite seu destino" required>
+                <input type="date" required>
+                <button type="submit">Procurar</button>
+            </form>
+
+        </section>
+
+    <!-- Barra lateral direita (Pacotes em promoção) -->
+    <aside class="secondary-content">
+
+        <h2 id="pacotes">Pacotes em promoção</h2>
+
+        <ul>
+            <li><img src="img/cancun.jpg" alt="Cancun"><b>Praias paradisíacas!</b>
+            <br>Pacote para Cancun - 5 dias por 3x de R$2.500</li>
+            <li><img src="img/londres.jpg" alt="Londres"><b>Intercâmbio britânico</b>
+            <br>Pacote para Londres - 7 dias por 2x de R$4.000</li>
+            <li><img src="img/noronha.jpg" alt="Fernando de Noronha"><b>Super Oportunidade</b>
+            <br>Pacote para Fernando de Noronha- 4 dias por R$3.200</li>
+
+        </ul> 
+
+    </aside>
+
+    
+</div>
+
+<!-- Footer -->
+<footer>
+    <p id="contatos">&copy; 2025 Agência de Viagens - Contato: contato@agenciaviagens</p>
+</footer>
+  
+</body>
+</html>

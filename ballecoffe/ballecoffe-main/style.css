@@ -1,0 +1,424 @@
+/* Importação das Fonts Google Fonts) 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Inter:wght@600&family=Montserrat:wght@800&family=Teko:wght@600&display=swap');
+
+/* Estilos gerais (Todo o projeto) */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* Define o modelo de caixa para incluir padding e borda no tamanho total do elemento */
+}
+
+body {
+    background: #1F1517;
+    color: #FFFF;
+}
+
+html {
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none; /* Remove a decoração de texto, como sublinhado, do elemento */
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores de lista (bolinhas) de um elemento de lista */
+}
+
+/* _____________________________________________________ */
+/* Header */
+
+nav {
+    max-width: 1120px; /* Define a largura máxima do elemento em 1120 pixels */
+    margin: auto; /* Centraliza o elemento horizontalmente na tela */
+
+    padding: 1.5rem 10rem; 
+    /* 1.5rem: Isso define o preenchimento vertical (topo e base) do elemento como 1.5 vezes o tamanho da fonte do elemento raiz. Se a fonte do elemento raiz for 16 pixels, isso resultaria em um preenchimento vertical de 24 pixels.
+
+    10rem: Isso define o preenchimento horizontal (esquerda e direita) do elemento como 10 vezes o tamanho da fonte do elemento raiz. Com uma fonte do elemento raiz de 16 pixels, isso resultaria em um preenchimento horizontal de 160 pixels. */
+
+    display: flex; /* Define o elemento como um container flexível */
+    flex-direction: row; /* Define a direção dos elementos filhos como uma linha */
+    justify-content: space-between; /* Distribui os elementos filhos uniformemente ao longo do eixo principal, com espaçamento entre eles */
+    
+}
+
+.title {
+    font-family: 'Teko', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase; /* Transforma o texto para letras maiúsculas */
+}
+
+/* Estilos para o menu hamburguer */
+.menu-toggle {
+    display: none; /* Não exibe em telas grandes */
+    cursor: pointer;
+}
+
+/* Imagem do Hamburguer (Responsividade) */
+
+.menu-icon {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+  }
+
+.menu {
+    display: flex; /* Define o elemento como um container flexível */
+    flex-direction: row; /* Estabelece a direção dos elementos filhos para uma disposição em linha */
+    gap: 24px; /* Define o espaçamento entre os elementos filhos como 24 pixels */
+    color: #FFF2E780; /* Define a cor do texto para um tom específico de amarelo */
+    margin-top: 9px; /* Adiciona um espaçamento de margem superior de 9 pixels ao elemento */
+    margin-left: 25px;
+    margin-right: 25px;
+    
+}
+
+.menu a:hover {
+    color: #fff; /* Nova cor do texto quando o cursor passa por cima */
+}
+
+.menu a:visited {
+    color: #FFF2E780; /* Define a cor dos links visitados como #FFF2E780 */
+}
+
+.github {
+    color:#FFF2E7;
+    font-weight: 600;
+    margin-top: 8px; /* Adiciona um espaçamento de margem superior de 8 pixels ao elemento */
+}
+
+.github:hover {
+    color: #a45a49; /* Nova cor do texto quando o cursor passa por cima */
+}
+
+/* _____________________________________________________ */
+/* Sessão principal (Main) */
+
+main {
+    display: flex; /* Define o elemento como um container flexível */
+    flex-direction: column; /* Estabelece a direção dos elementos filhos para uma disposição em coluna */
+    
+}
+
+.container {
+    background: #181012;
+    transform: translateX(100%);
+    opacity: 0;
+
+    /* Adiciona transição para suavizar a animação */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Animação para entrada da direita para a esquerda */
+.container.slide-from-right {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.info {
+    max-width: 1120px; /* Define a largura máxima do elemento como 1120 pixels */
+    height: 60vh; /* Define a altura do elemento como 60% da altura da janela de visualização (viewport height) */
+    display: flex; /* Define o elemento como um container flexível */
+    flex-direction: row; /* Estabelece a direção dos elementos filhos para uma disposição em linha */
+    justify-content: space-between; /* Distribui os elementos filhos uniformemente ao longo do eixo principal, com espaçamento entre eles */
+    gap: 6rem; /* Define o espaçamento entre os elementos filhos como 6 vezes o tamanho da unidade rem */
+    align-items: center; /* Alinha os elementos filhos verticalmente no centro */
+    padding: 0rem 2rem; /* Define o preenchimento (padding) de 0 na direção vertical e 2 vezes o tamanho da unidade rem na direção horizontal */
+    margin: auto; /* Centraliza o elemento horizontalmente na tela */
+    overflow: clip; /* Apara o conteúdo que ultrapassa o container (No caso as fotos) */
+
+    
+}
+
+/* Destaque */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Usado na palavra (Novidades) no main */
+.marrom {
+    color: #a45a49;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: #FFF;
+}
+
+/* Linha marrom abaixo do título principal (Encontre a receita...) */
+hr {
+    border-color: #a45a49;
+}
+
+/* Texto abaixo do título principal (Explore dezenas...) */
+.subtitle {
+    color: #c7bab3;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+/* Galleria de fotos (Mosaico) */
+.images {
+    max-width: 45%; /* Define a largura máxima do elemento como 45% do espaço disponível */
+    column-count: 4; /* Divide o conteúdo do elemento em 4 colunas */
+    column-gap: 1rem; /* Define o espaçamento entre as colunas como 1 unidade rem */
+    margin: -1rem; /* Aplica uma margem negativa de 1 unidade rem em todas as direções (topo, direita, baixo, esquerda) */
+    
+}   
+
+.images > figure > img {
+    width: 100px;
+    border-radius: 0.5rem;
+}
+
+/* _____________________________________________________ */
+/* Botão */
+
+.button {
+    width: 100%;
+    max-width: 1120px;
+    padding: 1rem;
+    margin: auto;
+    transform: translateY(-50%); /* Move o elemento 50% do seu próprio tamanho para cima ao longo do eixo Y */
+
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #a45a49;
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+button:hover {
+    background: #783f37; /* Nova cor de fundo quando o cursor passa por cima */
+}
+
+/* _____________________________________________________ */
+/* Receitas */
+
+.receitas {
+    display: flex;
+    flex-direction: column;
+    max-width: 1120px;
+    padding: 3rem 2rem;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.receitas-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.receitas-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff2e7;
+}
+
+.receitas-subtitle {
+    color: #c7bab3;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Usado na palavra (Em alta) em receitas */
+
+.amarelo {
+    color: #e7a80e;
+}
+
+article {
+    column-count: 2;
+}
+
+.card {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: -3rem;
+}
+
+.card-2 {
+    background: #241a1c; /* Cor de fundo do elemento */
+    padding: 2rem; /* Preenchimento interno de 2 vezes o tamanho da unidade 'rem' */
+    border-radius: 0.5rem; /* Borda arredondada com raio de 0.5 vezes o tamanho da unidade 'rem' */
+    display: flex; /* Define o elemento como um container flexível */
+    flex-direction: column; /* Organiza os elementos filhos em uma coluna */
+    gap: 2rem; /* Define o espaçamento entre os elementos filhos como 2 vezes o tamanho da unidade 'rem' */
+    flex-basis: 29rem; /* Define o tamanho inicial flexível do elemento como 29 vezes o tamanho da unidade 'rem' */
+    margin-top: 2rem; /* Adiciona um espaçamento de margem superior de 2 vezes o tamanho da unidade 'rem' ao elemento */
+}
+
+.card-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cappuccino {
+    color: #fff2e7;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.avaliacao {
+    color: #756a67;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.descricao {
+    color: #c7bab3;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.author > img {
+    border-radius: 20rem;
+    width: 1.5rem;
+}
+
+.ignacio {
+    color: #c7bab3;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* _____________________________________________________ */
+/* Footer */
+
+footer {
+    padding: 1rem;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: #23181a;
+}
+footer-container {
+    color: #fff2e7;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+footer-content {
+    color: rgba(255, 242, 231, 0.5);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+/* _____________________________________________________ */
+/* Responsividade (Telas menores que 768px) */
+
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    nav ul {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background: #333;
+      width: 100%;
+      overflow: hidden;
+      transition: max-height 0.5s;
+      z-index: 9;
+    }
+    nav ul li {
+      display: block;
+      margin:auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .menu {
+        margin-left: 0px;
+    }
+ 
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+      margin-right: -70px;
+    }
+    .github {
+      margin-left: 70px;
+      margin-right: 70px;
+    }
+    .title {
+      margin-left: -100px;
+    }
+
+    /* Galleria de fotos (Mosaico) */
+  
+    .container {
+     padding-top: 30px;
+     padding-bottom: 30px;
+    }
+
+    .images {
+
+    column-count: 1; /* Exibe apenas 1 coluna de fotos */
+    column-gap: 0.5rem; /* Define o espaçamento entre as colunas como 1 unidade rem */
+    }
+    .receitas {
+        padding-top: 0px;
+    }
+
+    .button {
+        padding-bottom: 0px;
+    }
+
+    /* Receitas */
+
+    article {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px; /* Adiciona um espaçamento inferior entre os cards */
+    }
+
+  }
+  

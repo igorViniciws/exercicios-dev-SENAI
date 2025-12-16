@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 11b: Gerador de Citações</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    #quote {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #28a745;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <!-- Parágrafo para exibir a citação -->
+  <p id="quote">Clique no botão para gerar uma citação.</p>
+
+  <!-- Botão para gerar uma nova citação -->
+  <button id="newQuoteButton">Nova Citação</button>
+
+  <!-- Script JavaScript embutido na página -->
+  <script>
+    // Array de citações
+    const quotes = [
+      "A vida é o que acontece enquanto você está ocupado fazendo outros planos. – John Lennon",
+      "A simplicidade é o último grau de sofisticação. – Leonardo da Vinci",
+      "O sucesso é a soma de pequenos esforços repetidos dia após dia. – Robert Collier",
+      "Acredite que você pode e você já está no meio do caminho. – Theodore Roosevelt",
+      "Não importa o quão devagar você vá, desde que você não pare. – Confúcio",
+
+      "A resiliência leva o indivíduo ao sucesso!! – Ignacio Neto"
+
+    ];
+
+      // Seleciona os elementos com o DOM
+      const quoteElement = document.getElementById('quote');
+      const newQuoteButton = document.getElementById('newQuoteButton');
+
+      // Função para alternar as frases aleatóriamente
+      function generateQuote() {
+        // Função para sortear aleatóriamente
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+
+        // Mostra a citação correspondente
+        quoteElement.textContent = quotes[randomIndex];
+      }
+
+      // Evento de clique para o botão alterar a citação
+      newQuoteButton.addEventListener('click', generateQuote);
+
+    // Carrega uma nova citação na página
+    generateQuote();
+
+
+
+  </script>
+</body>
+</html>

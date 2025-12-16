@@ -1,0 +1,11 @@
+{
+    "name": "minha-api/railway",
+    "description": "API REST PHP para Railway",
+    "type": "project",
+    "require": {
+        "php": "^8.1"
+    },
+    "scripts": {
+        "start": "php -S 0.0.0.0:$PORT index.php"
+    }
+}

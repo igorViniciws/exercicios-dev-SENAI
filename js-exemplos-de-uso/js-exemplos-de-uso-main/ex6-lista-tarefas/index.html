@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <style>
+    /* Estilo para tarefas completas */
+    .completed {
+      text-decoration: line-through; /* Risca o texto */
+      color: gray; /* Muda a cor para cinza */
+    }
+  </style>
+</head>
+<body>
+  <!-- Campo de entrada para nova tarefa -->
+  <input type="text" id="taskInput" placeholder="Nova tarefa">
+
+  <!-- Botão para adicionar tarefa -->
+  <button id="addButton">Adicionar</button>
+
+  <!-- Lista onde as tarefas serão exibidas -->
+  <ul id="taskList"></ul>
+
+  <!-- Script JavaScript embutido na página -->
+  <script>
+    const taskInput = document.querySelector('#taskInput'); // Campo de texto
+    const addButton = document.querySelector('#addButton'); // Botão de adicionar
+    const taskList = document.querySelector('#taskList'); // Lista de tarefas
+
+    // Adiciona um evento de clique ao botão "Adicionar"
+    addButton.addEventListener('click', () => {
+      // Obtém o texto da tarefa e remove espaços em branco no início e no fim
+      const taskText = taskInput.value.trim();
+
+      // Verifica se o texto não está vazio
+      if (taskText !== '') {
+        // Cria um novo item de lista (<li>)
+        const li = document.createElement('li');
+        li.textContent = taskText; // Define o texto da tarefa
+
+        // Adiciona um evento de clique ao item da lista para marcar/desmarcar como concluído
+        li.addEventListener('click', () => {
+           li.classList.toggle('completed') // Alterna a classe 'completed'
+        });
+
+        // Adiciona o item à lista de tarefas
+        taskList.appendChild(li);
+
+        // Limpa o campo de entrada
+        taskInput.value ='';
+      }
+    });
+
+  </script>
+</body>
+</html>

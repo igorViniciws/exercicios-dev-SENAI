@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 3: localStorage</title>
+  <style>
+    /* Estilos padrão para o corpo da página */
+    body {
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s, color 0.3s; /* Transição suave para mudanças de cor */
+    }
+
+    /* Classe para o modo escuro */
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botão para alternar entre modo claro e escuro -->
+  <button id="myButton">Modo Escuro</button>
+
+  <!-- Script JavaScript embutido na página -->
+  <script>
+    // Seleciona o botão e o corpo da página
+    const button = document.querySelector('#myButton');
+    const body = document.body;
+
+    // O localStorage é uma funcionalidade do navegador que permite armazenar dados no formato chave-valor e mantê-los disponíveis entre sessões, mesmo após recarregar ou fechar o navegador. No exemplo, ele salva a preferência de tema em 'mode', registrando o valor como 'dark' ou 'light' quando o usuário alterna entre os modos. Ao carregar a página, o código acessa o valor salvo com localStorage.getItem('mode') e aplica o tema correspondente, garantindo uma experiência consistente e personalizada ao usuário.
+
+    // Verifica se há uma preferência de modo salva no localStorage
+
+    const savedMode = localStorage.getItem ('mode');
+    if (savedMode === 'dark') {
+      // Se o modo escuro estiver salvo, aplica a classe 'dark-mode' e atualiza o texto do botão
+      body.classList.add('dark-mode');
+      button.textContent = 'Modo Claro';
+    }
+
+    // Adiciona um evento de clique ao botão
+    button.addEventListener('click', () => {
+      // Alterna a classe 'dark-mode' no corpo da página
+      body.classList.toggle('dark-mode');  
+    
+
+      // Verifica se o modo escuro está ativo e salva a preferência no localStorage
+    if (body.classList.contains ('dark-mode')) {
+      localStorage.setItem('mode', 'dark');
+      button.textContent = 'Modo Claro';
+    } else {
+      localStorage.setItem('mode', 'light');
+      button.textContent = 'Modo Escuro';
+    }
+
+  });
+      
+  </script>
+</body>
+</html>

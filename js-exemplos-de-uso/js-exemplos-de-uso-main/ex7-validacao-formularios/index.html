@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validação de Formulário</title>
+  <style>
+    /* Estilo para mensagens de erro */
+    .error {
+      color: red; /* Cor do texto */
+      font-size: 0.9rem; /* Tamanho da fonte */
+    }
+  </style>
+</head>
+<body>
+  <!-- Formulário de cadastro -->
+  <form id="signupForm">
+    <div>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name">
+      <!-- Span para exibir mensagem de erro do nome -->
+      <span class="error" id="nameError"></span>
+    </div>
+    <div>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email">
+      <!-- Span para exibir mensagem de erro do e-mail -->
+      <span class="error" id="emailError"></span>
+    </div>
+    <div>
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password">
+      <!-- Span para exibir mensagem de erro da senha -->
+      <span class="error" id="passwordError"></span>
+    </div>
+    <!-- Botão de envio do formulário -->
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <!-- Script JavaScript embutido na página -->
+  <script>
+    // Seleciona o formulário pelo ID
+    const form = document.querySelector('#signupForm');
+
+    // Adiciona um evento de submit ao formulário (event.preventDefault)
+    form.addEventListener('submit', (event) => {
+       // Impede o envio padrão do formulário
+       event.preventDefault();
+
+      // O evento padrão de um formulário é enviar seus dados ao servidor e recarregar a página. O uso de event.preventDefault() bloqueia esse comportamento, permitindo validar os campos e controlar como os dados serão enviados.
+
+      // Obtém os valores dos campos e remove espaços em branco
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const password = form.password.value.trim();
+
+      // Variável para controlar se o formulário é válido
+      let isValid = true;
+
+      // Validação do nome
+      if (name === '') {
+        document.querySelector('#nameError').textContent = 'Nome é obrigatório.';
+        isValid = false; // Formulário inválido
+      } else {
+        document.querySelector('#nameError').textContent = ''; // Limpa a mensagem de erro
+      }
+
+      // Validação do e-mail
+      if (email === '' || !email.includes('@')) {
+        document.querySelector('#emailError').textContent = 'E-mail inválido.';
+        isValid = false; // Formulário inválido
+      } else {
+        document.querySelector('#emailError').textContent = ''; // Limpa a mensagem de erro
+      }
+
+      // Validação da senha
+      if (password.length < 6) {
+        document.querySelector('#passwordError').textContent = 'Senha deve ter pelo menos 6 caracteres.';
+        isValid = false; // Formulário inválido
+      } else {
+        document.querySelector('#passwordError').textContent = ''; // Limpa a mensagem de erro
+      }
+
+      // Se o formulário for válido, exibe uma mensagem e reseta os campos
+      if (isValid) {
+        alert('Cadastro realizado com sucesso!!');
+        form.reset(); //Limpa todos os campos do formulário
+      }
+  });
+
+  </script>
+</body>
+</html>

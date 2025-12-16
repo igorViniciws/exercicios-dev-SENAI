@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 2: Alternância de Estilos</title>
+  <style>
+    /* Define o estilo inicial da div */
+    #myDiv {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botão que será usado para mudar a cor da div -->
+  <button id="myButton">Mudar Cor</button>
+
+  <!-- Div que terá sua cor de fundo alterada -->
+  <div id="myDiv"></div>
+
+  <!-- Script JavaScript embutido na página -->
+  <script>
+
+    // Seleciona o botão e a div pelo ID
+    const button =document.querySelector('#myButton');
+    const div =document.querySelector('#myDiv');
+
+    // Adiciona um evento de clique ao botão
+    button.addEventListener ('click', () => {
+      // Verifica a cor atual da div e alterna entre lightblue e lightcoral
+      if (div.style.backgroundColor === 'lightblue') {
+        div.style.backgroundColor = 'lightcoral';
+      } else {
+        div.style.backgroundColor = 'lightblue';
+      }
+    });
+
+      
+
+  </script>
+</body>
+</html>

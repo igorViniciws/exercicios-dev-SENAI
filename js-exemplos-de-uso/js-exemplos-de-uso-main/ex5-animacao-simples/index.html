@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 5: Animação Simples</title>
+  <style>
+    /* Estilo da div que será animada */
+    #myDiv {
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+      position: relative; /* Permite mover a div com a propriedade 'left' */
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botão que inicia a animação -->
+  <button id="leftButton">Mover Esquerda</button>
+  <button id="rightButton">Mover Direita</button>
+
+  <!-- Div que será movida ao clicar no botão -->
+  <div id="myDiv"></div>
+
+  <!-- Script JavaScript embutido na página -->
+  <script>
+    // Seleciona o botão e a div pelo ID
+    const leftButton = document.querySelector('#leftButton');
+    const rightButton = document.querySelector('#rightButton');
+    const div = document.querySelector('#myDiv');
+
+    // Variável para controlar a posição da div
+    let position = 0;
+
+    // Adiciona um evento de clique ao botão para mover para a esquerda
+    leftButton.addEventListener('click', () => {
+      position -= 50;  // Diminui a posição em 50 pixels
+      div.style.left = `${position}px`;  // Move a div para a nova posição
+    });
+
+    // Adiciona um evento de clique ao botão para mover para a direita
+    rightButton.addEventListener('click', () => {
+      position += 50;  // Aumenta a posição em 50 pixels
+      div.style.left = `${position}px`;  // Move a div para a nova posição
+    });
+  </script>
+</body>
+</html>
